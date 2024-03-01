@@ -12,6 +12,7 @@ export function adminAction(dataSumbit) {
 export function needDownLoad(dataSubmit) {
     const request = axios.get(`/api/setting/down`, dataSubmit)
         .then(response => response.data)
+    console.log(request);
     return {
         type: 'Need Download',
         payload: request

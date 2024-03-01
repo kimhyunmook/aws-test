@@ -36,7 +36,6 @@ function App() {
     <Router>
       {headerCofirm === true ? <Header /> : null}
       <Routes>
-        {/* <Route path="/" element={<Index2 />} /> */}
         <Route path="/" element={<Main />} />
         <Route path="/adm" element={<ADM />} />
         <Route path="/download" element={<NeedDownLoad />} />

@@ -1,0 +1,38 @@
+{
+    "menu": {
+        "table_name": "adm_menu",
+        "list": [
+            {
+                "name":"About",
+                "href":"/about",
+                "menu_type":"normal",
+                "description":"About",
+                "depth": 0,
+                "admin": 0,
+                "custom": "",
+                "custom_comment": ""
+            },
+            {
+                "name":"Project",
+                "href":"/project/calendar",
+                "menu_type":"normal",
+                "description":"main",
+                "depth": 0,
+                "admin": 0,
+                "custom": "",
+                "custom_comment": ""
+            },
+            {
+                "name":"게시판",
+                "href":"/board/basic",
+                "menu_type":"board",
+                "description":"게시판",
+                "depth": 0,
+                "admin": 0,
+                "custom": "",
+                "custom_comment": ""
+            }
+       
+        ]
+    }
+}

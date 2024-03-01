@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Skeleton from "react-loading-skeleton";
+// import Skeleton from "react-loading-skeleton";
 import { getSetting } from "../../store/settingSlice";
 import { mobileSize } from "../../size";
 import Logo from "../common/logo";
@@ -132,7 +132,7 @@ export function LoadingPage({ style, children }) {
   };
   return (
     <div style={style}>
-      <Skeleton />
+      {/* <Skeleton /> */}
       {children}
     </div>
   );

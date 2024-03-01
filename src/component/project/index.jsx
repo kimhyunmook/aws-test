@@ -1,11 +1,10 @@
 import { BtnArea, Container2, Modal } from "../common/commonUi";
 import { useCallback, useEffect, useRef, useState } from "react";
-import "react-loading-skeleton/dist/skeleton.css";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
-import { FontAwsome } from "../common/fontawsome";
+// import { FontAwsome } from "../common/fontawsome";
 import {
   _ProjectCalendarInfo,
   _ProjectInfo,
@@ -21,7 +20,7 @@ import Side from "./side";
 import axios from "axios";
 
 export default function ProjectS() {
-  const urlParam = window.location.search;
+  // const urlParam = window.location.search;
   const store = useSelector((state) => state);
   const userInfo = store.userInfo.data;
   const calendar_info = store.calendarInfo;

@@ -9,14 +9,14 @@ export const commonAPi = {
   post: async (body) => {
     const url = getUrl(body);
     return axios
-      .post(`/api${url}`, body.payload)
+      .post(`${process.env.REACT_APP_DB_HOST}/api${url}`, body.payload)
       .then((res) => res.data)
       .catch((error) => error);
   },
   get: async (body) => {
     const url = getUrl(body);
     return axios
-      .get(`/api${url}`, body.payload)
+      .get(`${process.env.REACT_APP_DB_HOST}/api${url}`, body.payload)
       .then((res) => res.data)
       .catch((error) => error);
   },

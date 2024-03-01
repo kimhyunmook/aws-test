@@ -5,6 +5,7 @@ import Container from "../common/container";
 import { useDispatch } from "react-redux";
 import { _Condtion } from "../../store/menuSlice";
 import { Container2 } from "../common/commonUi";
+import axios from "axios";
 
 export default function NeedDownLoad(props) {
   const form = useRef();
@@ -29,21 +30,26 @@ export default function NeedDownLoad(props) {
       password: dbPassword,
       db: db,
     }).payload.then((res) => {
+      console.log(res.msg)
       if (res.msg?.errorno === "ETIMEDOUT") {
         alert("host를 확인해주세요.");
         return;
       }
       if (!res.ok) {
-        alert("server 정보를 정확히 입력해주세요.");
+        alert("server 정보를 정확히 입력해주세요."+res.ok+res.msg);
         return;
+      } else {
+        alert('ddd')
       }
+
+      axios.post('http://localhost:8000/ping').then(res=>console.log(res));
 
       navigate("/download?task=2");
     });
   };
   const next3 = (event) => {
     event.preventDefault();
-    let body = { url: "/setting/menu" };
+    let body = { url: `${process.env.REACT_APP_DB_HOST}/setting/menu` };
     dispatch(_Condtion(body));
     setTimeout(() => {
       window.location.href = "/";

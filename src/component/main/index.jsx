@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { reset } from "../../store/boardSlice";
 import Slider2 from "../common/slider/slider";
 import { _Condtion } from "../../store/menuSlice";
-import D3C from "../common/d3/d3";
 import { _GetLike } from "../../store/likeSlice";
 import { Container2 } from "../common/commonUi";
 import Likes from "../aside/likes";

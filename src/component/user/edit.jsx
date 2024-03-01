@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import { useDropzone } from 'react-dropzone';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Container2 } from '../common/commonUi';
@@ -29,7 +28,6 @@ function UserEdit() {
         })
     }, []);
 
-    const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
     useEffect(() => {
         setId(userInfo.id)
